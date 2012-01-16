@@ -16,6 +16,10 @@ body {
     content: "";
 }
 
+.container > div[class^="spacer"] {
+    float: left;
+}
+
 .container > .row {
     width: 100%;
     float: left;
@@ -127,8 +131,8 @@ div {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-    margin-top: 0px;
-    margin-bottom: 5px;
+    margin: 0px;
+    line-height: 50px;
 }
 
 h1,h2,h3,h4,h5,h6 a {
@@ -139,65 +143,74 @@ h1,h2,h3,h4,h5,h6 a {
 
 h1 {
     font-size: 28px;
-    line-height: 32px;
 }
 
 h2 {
     font-size: 24px;
-    line-height: 28px;
 }
 
 h3 {
     font-size: 22px;
-    line-height: 26px;
 }
 
 h4 {
     font-size: 20px;
-    line-height: 24px;
 }
 
 h5 {
     font-size: 18px;
-    line-height: 22px;
 }
 
 h6 {
     font-size: 16px;
-    line-height: 20px;
 }
 
 /* form */
-label {
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
-    float: left;
-    width: 150px;
-    line-height: 30px;
+form {
+    margin-top: 10px;
 }
-
-label:after {
+form:after {
     clear: both;
 }
 
-textarea {
-    font-family: Georgia, Garamond,serif;
+form > div[class^="spacer"] {
+    float: left;
+}
+
+form > button {
+    float: left;
+}
+
+textarea,input,select,label,div.btn,a.btn,button,input[type="button"] {
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;   
+}
+textarea,input,select,label {
+    float: left;
+}
+
+textarea {
     line-height: 150%;
+    padding: 4px;
     resize: vertical;
     overflow: auto;
 }
 
-input {
-    font-family: Georgia, Garamond,serif;
-    font-size: 16px;
-    height: 25px;
+input[type=text], input[type=password] {
+    padding: 4px;
+}
+
+input[type=checkbox], input[type=radio] {
+    cursor: pointer;
 }
 
 select {
-    font-family: Georgia, Garamond,serif;
-    font-size: 16px;
-    line-height: 25px;
-    height: 25px;
+    padding: 4px;
+}
+
+label {
+    width: 150px;
+    line-height: 35px;
 }
 
 div.btn,a.btn,button,input[type="button"] {
@@ -207,30 +220,36 @@ div.btn,a.btn,button,input[type="button"] {
     background-color: white;
     border: 1px black solid;
     text-align: center;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
     color: black;
     text-decoration: none;
 }
 
-button:hover, input[type="button"]:hover, .btn:hover, .btn:focus {
+button:hover,input[type="button"]:hover,.btn:hover,.btn:focus {
     background-color: #f8f8f8;
     color: black;
     text-decoration: none;
 }
 
 /* code */
+pre, code {
+    font-family: Courier, monospace;    
+}
+
 pre {
     display: block;
     width: 90%;
     margin-left: auto; 
     margin-right: auto;
     border: 1px solid #d8d8d8;
-    padding: 5px 0px 5px 15px;
-    font-family: Courier, monospace;
-    font-size: 14px;
     background-color: #FEFBF3;
+    padding: 5px 0px 5px 15px;
+    font-size: 14px;
     white-space: pre-wrap;
     word-wrap: break-word;
+}
+
+code {
+    font-size: 16px;
 }
 
 /* lists */
@@ -265,22 +284,28 @@ a[name] {
     background-color: white;
 }
 
-.header h1,h2,h3,h4,h5,h6 {
-    line-height: 50px;
-    margin-bottom: 0px;
-}
-
 .header img {
     float: left;
     margin-right: 10px;
     max-height: 50px;
 }
 
-.header input,textarea,select,label {
+.header select {
+    margin-top: 10px;
+}
+.header input {
+    margin-top: 10px;
+    float: none;
+}
+.header textarea {
     margin-top: 10px;
 }
 
-.header label,a {
+.header a {
+    margin-right: 15px;
+    float: none;
+}
+.header label {
     margin-right: 15px;
     float: none;
 }
@@ -304,10 +329,6 @@ div.spacer2 {
 }
 div.spacer3 {
     height: 30px;
-}
-
-.container > div[class^="spacer"] {
-    float: left;
 }
 
 div.spacer1-header {
