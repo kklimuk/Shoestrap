@@ -1,0 +1,296 @@
+body {
+    margin: 0px;
+    overflow-y: scroll;
+}
+
+/* grid system */
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+}
+
+.container > .row {
+    width: 100%;
+    float: left;
+}
+
+.container > .row:after {
+    clear: both;
+}
+
+.row > [class^="span"] {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.row > [class^="offset"] {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.row > .span1 {
+    width: 60px;
+}
+.row > .offset1 {
+    margin-left: 90px;
+}
+
+.row > .span2 {
+    width: 140px;
+}
+.row > .offset2 {
+    margin-left: 170px;
+}
+
+.row > .span3 {
+    width: 220px;
+}
+.row > .offset3 {
+    margin-left: 250px;
+}
+
+.row > .span4 {
+    width: 300px;
+}
+.row > .offset4 {
+    margin-left: 330px;
+}
+
+.row > .span5 {
+    width: 380px;
+}
+.row > .offset5 {
+    margin-left: 410px;
+}
+
+.row > .span6 {
+    width: 460px;
+}
+.row > .offset6 {
+    margin-left: 490px;
+}
+
+.row > .span7 {
+    width: 540px;
+}
+.row > .offset7 {
+    margin-left: 570px;
+}
+
+.row > .span8 {
+    width: 620px;
+}
+.row > .offset8 {
+    margin-left: 650px;
+}
+
+.row > .span9 {
+    width: 700px;
+}
+.row > .offset9 {
+    margin-left: 730px;
+}
+
+.row > .span10 {
+    width: 780px;
+}
+.row > .offset10 {
+    margin-left: 810px;
+}
+
+.row > .span11 {
+    width: 860px;
+}
+.row > .offset11 {
+    margin-left: 890px;
+}
+
+.row > .span12 {
+    width: 940px;
+}
+
+/* font system */
+div {
+    font-family: Georgia, Garamond,serif;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 32px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+h3 {
+    font-size: 22px;
+    line-height: 26px;
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+h5 {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* buttons */
+div.btn,a.btn,button,input[type="button"] {
+    display: block;
+    cursor: pointer;
+    width: 100px;
+    padding:0px;
+    height: 30px;
+    line-height: 30px;
+    background-color: white;
+    border: 1px black solid;
+    text-align: center;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+button:hover, input[type="button"]:hover, .btn:hover, .btn:focus {
+    background-color: #fafafa;
+    color: black;
+    text-decoration: none;
+}
+
+/* code */
+pre {
+    display: block;
+    width: 90%;
+    margin-left: auto; 
+    margin-right: auto;
+    border: 1px solid #d8d8d8;
+    padding: 5px 0px 5px 15px;
+    font-family: Courier, monospace;
+    font-size: 14px;
+    background-color: #FEFBF3;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* form */
+label {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    float: left;
+    width: 150px;
+    line-height: 30px;
+}
+
+label:after {
+    clear: both;
+}
+
+textarea {
+    font-family: Georgia, Garamond,serif;
+    font-size: 16px;
+    line-height: 150%;
+    resize: vertical;
+    overflow: auto;
+}
+
+input {
+    font-family: Georgia, Garamond,serif;
+    font-size: 16px;
+    height: 25px;
+}
+
+select {
+    font-family: Georgia, Garamond,serif;
+    font-size: 16px;
+    line-height: 25px;
+    height: 25px;
+}
+
+/* lists */
+ul,ol {
+    margin: 2px;
+    padding-left: 20px;
+}
+
+/* links */
+a {
+    color: #00438A;
+    text-decoration: none;
+}
+a:hover {
+    color: #0059B2;
+    text-decoration: underline;
+}
+
+/* header */
+.header {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 10000;
+    overflow: hidden;
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+
+.header h1,h2,h3,h4,h5,h6 {
+    line-height: 50px;
+    margin-bottom: 0px;
+}
+
+.header img {
+    float: left;
+    margin-right: 10px;
+    max-height: 50px;
+}
+
+.header input,textarea,select,label {
+    margin-top: 10px;
+}
+
+.header label,a {
+    margin-right: 15px;
+    float: none;
+}
+
+.header [class^="span"] {
+    height: 50px;
+    line-height: 50px;
+}
+
+/* spacers */
+div.spacer {
+    font-size: 0px;
+    width: 100%;
+    height: 10px;
+}
+
+.container > div.spacer {
+    float: left;
+}
+
+div.header-spacer {
+    font-size: 0px;
+    width: 100%;
+    height: 60px;
+}
