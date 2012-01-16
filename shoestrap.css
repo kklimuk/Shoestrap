@@ -171,6 +171,8 @@ form {
 }
 form:after {
     clear: both;
+    display: table;
+    content: "";
 }
 
 form > div[class^="spacer"] {
@@ -212,6 +214,9 @@ label {
     width: 150px;
     line-height: 35px;
 }
+label:after {
+    clear: both;
+}
 
 div.btn,a.btn,button,input[type="button"] {
     display: inline;
@@ -230,16 +235,40 @@ button:hover,input[type="button"]:hover,.btn:hover,.btn:focus {
     text-decoration: none;
 }
 
-/* code */
+/* spacers */
+div[class^="spacer"] {
+    font-size: 0px;
+    width: 100%;    
+}
+
+div.spacer1 {
+    height: 10px;
+}
+div.spacer2 {
+    height: 20px;
+}
+div.spacer3 {
+    height: 30px;
+}
+
+div.spacer1-header {
+    height: 60px;
+}
+div.spacer2-header {
+    height: 110px;
+}
+div.spacer3-header {
+    height: 160px;
+}
+
+/* elements */
 pre, code {
     font-family: Courier, monospace;    
 }
 
 pre {
     display: block;
-    width: 90%;
-    margin-left: auto; 
-    margin-right: auto;
+    margin-top: 5px;
     border: 1px solid #d8d8d8;
     background-color: #FEFBF3;
     padding: 5px 0px 5px 15px;
@@ -252,13 +281,11 @@ code {
     font-size: 16px;
 }
 
-/* lists */
 ul,ol {
     margin: 2px;
     padding-left: 20px;
 }
 
-/* links */
 a {
     color: #00438A;
     text-decoration: none;
@@ -272,7 +299,6 @@ a[name] {
     text-decoration: none;
 }
 
-/* header */
 .header {
     height: 50px;
     width: 100%;
@@ -308,35 +334,10 @@ a[name] {
 .header label {
     margin-right: 15px;
     float: none;
+    clear: none;
 }
 
 .header [class^="span"] {
     height: 50px;
     line-height: 50px;
-}
-
-/* spacers */
-div[class^="spacer"] {
-    font-size: 0px;
-    width: 100%;    
-}
-
-div.spacer1 {
-    height: 10px;
-}
-div.spacer2 {
-    height: 20px;
-}
-div.spacer3 {
-    height: 30px;
-}
-
-div.spacer1-header {
-    height: 60px;
-}
-div.spacer2-header {
-    height: 110px;
-}
-div.spacer3-header {
-    height: 160px;
 }
